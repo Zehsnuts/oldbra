@@ -1,0 +1,7 @@
+<ContentControl Tag="0"     Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="15" Height="50" Width="1015" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="677"   Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="84" Height="50" Width="1015" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="4704"  Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="150" Height="50" Width="1015" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="6728"  Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="218" Height="50" Width="1015" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="17538" Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="284" Height="50" Width="1015" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="19012" Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="352" Height="50" Width="1015" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="20005" Content="" IsManipulationEnabled="True" Canvas.Left="32" Canvas.Top="418" Height="50" Width="1015" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>

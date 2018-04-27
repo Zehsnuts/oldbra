@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Bradesco.Apps.Prime.PrimePF_old"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 mc:Ignorable="d" Width="768" Height="1022">
+			 
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="UserControl.Loaded">
+			<EventTrigger.Actions>
+				<BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+				<BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+			</EventTrigger.Actions>
+		</EventTrigger>
+	</UserControl.Triggers>
+
+	<Canvas Name="canvasTarifa"  ClipToBounds="True"  >
+		<Image Width="768" Height="1030" Source="/Bradesco;component/Imagens/prime/indice_prime_pf_old.png" Stretch="UniformToFill" />
+
+        <ContentControl Tag="0" Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="10" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="468"   Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="58" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="3319"  Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="106" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="4742"  Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="154" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="12374" Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="202" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="13417" Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="250" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="14116" Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="298" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+
+        <TextBlock x:Name="txtVigencia" Canvas.Left="203" Text="" TextWrapping="Wrap" Canvas.Top="902" Height="18" Width="240" Background="#00A0A2A5" Foreground="White" FontFamily="NewJuneBold" FontSize="14"/>
+		<TextBlock x:Name="txtTarifas"  Canvas.Left="44" TextWrapping="Wrap" Canvas.Top="1000" Height="13" Width="676" Background="#00A6A8AB" Foreground="White" FontFamily="NewJuneMedium" FontSize="10"/>        
+
+	</Canvas>
+
+</UserControl>
+

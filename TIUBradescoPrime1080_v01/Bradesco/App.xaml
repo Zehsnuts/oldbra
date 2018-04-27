@@ -1,0 +1,41 @@
+﻿<Application x:Class="Bradesco.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <MatrixTransform x:Key="InitialMatrixTransform">
+            <MatrixTransform.Matrix>
+                <Matrix OffsetX="0" OffsetY="0" />
+            </MatrixTransform.Matrix>
+        </MatrixTransform>
+
+        <Storyboard x:Key="showItemsStoryboard">
+            <DoubleAnimation
+      Storyboard.TargetProperty="Opacity"
+                              DecelerationRatio="0.5"
+                              To="1"
+                              Duration="00:00:00.400"/>
+            <DoubleAnimation
+      Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)"
+                              To="0"
+                              DecelerationRatio="0.5"
+                              Duration="00:00:00.400"/>
+        </Storyboard>
+
+        <Storyboard x:Key="showItemsMenuStoryboard">
+            <DoubleAnimation
+      Storyboard.TargetProperty="Opacity"
+                              DecelerationRatio="0.5"
+                              To="1"
+                              Duration="00:00:00.800"/>
+            <DoubleAnimation
+      Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                              To="0"
+                              DecelerationRatio="0.5"
+                              Duration="00:00:00.800"/>
+        </Storyboard>
+
+            
+    </Application.Resources>
+    
+    
+</Application>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+	<parameter name="VersaoApp">A.jan2018v1.0</parameter>
+	<parameter name="VersaoConteudo">C.mar2018v1.0</parameter>
+		
+	<parameter name="VigenciaTarifaPFNova">01/03/2018</parameter>
+	<parameter name="VigenciaTarifaPFAntiga">01/02/2018 até 28/02/2018</parameter>
+	
+		<parameter name="VigenciaTarifaPJNova">01/03/2018</parameter>
+	<parameter name="VigenciaTarifaPJAntiga">01/02/2018 até 28/02/2018</parameter>
+		
+	<parameter name="VigenciaTarifaPrimePFNova">01/03/2018</parameter>
+	<parameter name="VigenciaTarifaPrimePFAntiga">01/02/2018 até 28/02/2018</parameter>
+
+	<parameter name="TaxaJurosPFNova">Taxa de Juros Efetiva Máxima do Cheque Especial – 13,33% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+	<parameter name="TaxaJurosPFAntiga">Taxa de Juros Efetiva Máxima do Cheque Especial – 13,33% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+
+	<parameter name="TaxaJurosPJNova">Taxa de Juros Efetiva Máxima do Cheque Especial – 13,44% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+	<parameter name="TaxaJurosPJAntiga">Taxa de Juros Efetiva Máxima do Cheque Especial – 13,44% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+
+	<parameter name="TaxaJurosPrimePFNova">Taxa de Juros Efetiva Máxima do Cheque Especial – 12,45% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+	<parameter name="TaxaJurosPrimePFAntiga">Taxa de Juros Efetiva Máxima do Cheque Especial – 12,45% ao mês. Circular 2.936, de 14.10.1999, do BACEN</parameter>
+</parameters>

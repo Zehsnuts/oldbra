@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{339C8486-CC9E-4D93-80DE-B3C0768EA0EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bradesco</RootNamespace>
+    <AssemblyName>Bradesco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Organizar\Solutions\Bradesco%401080\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F720AA329F9AD0E64B0E822C932DE7A1F27F84B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Bradesco_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bradesco_42x42.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>bradesco.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Apps\AjudaMenuInterno.xaml.cs">
+      <DependentUpon>AjudaMenuInterno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\AjudaMenuPrincipal.xaml.cs">
+      <DependentUpon>AjudaMenuPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\CanaisDeAcesso.xaml.cs">
+      <DependentUpon>CanaisDeAcesso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\AL.xaml.cs">
+      <DependentUpon>AL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\AM.xaml.cs">
+      <DependentUpon>AM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\CE.xaml.cs">
+      <DependentUpon>CE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\ES.xaml.cs">
+      <DependentUpon>ES.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\GO.xaml.cs">
+      <DependentUpon>GO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\MA.xaml.cs">
+      <DependentUpon>MA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\MS.xaml.cs">
+      <DependentUpon>MS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\MT.xaml.cs">
+      <DependentUpon>MT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\PA.xaml.cs">
+      <DependentUpon>PA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\PE.xaml.cs">
+      <DependentUpon>PE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\PI.xaml.cs">
+      <DependentUpon>PI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\RN.xaml.cs">
+      <DependentUpon>RN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\RR.xaml.cs">
+      <DependentUpon>RR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\TO.xaml.cs">
+      <DependentUpon>TO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\BA.xaml.cs">
+      <DependentUpon>BA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\DF.xaml.cs">
+      <DependentUpon>DF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\MG.xaml.cs">
+      <DependentUpon>MG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\PR.xaml.cs">
+      <DependentUpon>PR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\RJ.xaml.cs">
+      <DependentUpon>RJ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\RS.xaml.cs">
+      <DependentUpon>RS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\SC.xaml.cs">
+      <DependentUpon>SC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Estados\SP.xaml.cs">
+      <DependentUpon>SP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Folhetos\FolhetosEmpresasNegocios.xaml.cs">
+      <DependentUpon>FolhetosEmpresasNegocios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Folhetos\FolhetosExclusive.xaml.cs">
+      <DependentUpon>FolhetosExclusive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Folhetos\FolhetosIndice.xaml.cs">
+      <DependentUpon>FolhetosIndice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Folhetos\FolhetosNavegador.xaml.cs">
+      <DependentUpon>FolhetosNavegador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Folhetos\FolhetosPF.xaml.cs">
+      <DependentUpon>FolhetosPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\FundosDeInvestimento.xaml.cs">
+      <DependentUpon>FundosDeInvestimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\InformativoAoPublico.xaml.cs">
+      <DependentUpon>InformativoAoPublico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\INSS.xaml.cs">
+      <DependentUpon>INSS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\Folhetos.xaml.cs">
+      <DependentUpon>Folhetos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\FolhetosNavegador.xaml.cs">
+      <DependentUpon>FolhetosNavegador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimeFundosDeInvestimento.xaml.cs">
+      <DependentUpon>PrimeFundosDeInvestimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimeInformativoAoPublico.xaml.cs">
+      <DependentUpon>PrimeInformativoAoPublico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimeMenu.xaml.cs">
+      <DependentUpon>PrimeMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePF.xaml.cs">
+      <DependentUpon>PrimePF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePfLista.xaml.cs">
+      <DependentUpon>PrimePfLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePfLista_old.xaml.cs">
+      <DependentUpon>PrimePfLista_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePFVigencias.xaml.cs">
+      <DependentUpon>PrimePFVigencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePF_old.xaml.cs">
+      <DependentUpon>PrimePF_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePJ.xaml.cs">
+      <DependentUpon>PrimePJ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimePjLista.xaml.cs">
+      <DependentUpon>PrimePjLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Prime\PrimeSCR.xaml.cs">
+      <DependentUpon>PrimeSCR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Procon.xaml.cs">
+      <DependentUpon>Procon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\ReclamacoesOuSugestoes.xaml.cs">
+      <DependentUpon>ReclamacoesOuSugestoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\SCR.xaml.cs">
+      <DependentUpon>SCR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPF.xaml.cs">
+      <DependentUpon>TarifasPF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPFLista.xaml.cs">
+      <DependentUpon>TarifasPFLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPFLista_old.xaml.cs">
+      <DependentUpon>TarifasPFLista_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPFVigencias.xaml.cs">
+      <DependentUpon>TarifasPFVigencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPF_old.xaml.cs">
+      <DependentUpon>TarifasPF_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPJ.xaml.cs">
+      <DependentUpon>TarifasPJ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPJLista.xaml.cs">
+      <DependentUpon>TarifasPJLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPJLista_old.xaml.cs">
+      <DependentUpon>TarifasPJLista_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPJVigencias.xaml.cs">
+      <DependentUpon>TarifasPJVigencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\TarifasPJ_old.xaml.cs">
+      <DependentUpon>TarifasPJ_old.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BradescoInfo.cs" />
+    <Compile Include="Controls.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Helpers\Ticker.cs" />
+    <Compile Include="Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Apps\AjudaMenuInterno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\AjudaMenuPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\CanaisDeAcesso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\AL.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\AM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\CE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\ES.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\GO.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\MA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\MS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\MT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\PA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\PE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\PI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\RN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\RR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\TO.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Estados\BA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\DF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\MG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\PR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\RJ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\RS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\SC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Estados\SP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Folhetos\FolhetosEmpresasNegocios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Folhetos\FolhetosExclusive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Folhetos\FolhetosIndice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Folhetos\FolhetosNavegador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Folhetos\FolhetosPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\FundosDeInvestimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\InformativoAoPublico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\INSS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\Folhetos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\FolhetosNavegador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimeFundosDeInvestimento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Prime\PrimeInformativoAoPublico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Prime\PrimeMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePfLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePfLista_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePFVigencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePF_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePJ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimePjLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Prime\PrimeSCR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Apps\Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\Procon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\ReclamacoesOuSugestoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\SCR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPFLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPFLista_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPFVigencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPF_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPJ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPJLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPJLista_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPJVigencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Apps\TarifasPJ_old.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PDFViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PDFViewer.xaml.cs">
+      <DependentUpon>PDFViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bradesco.pfx" />
+    <None Include="Bradesco_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imagens\icon_menu_01.png" />
+    <Resource Include="Imagens\icon_menu_02.png" />
+    <Resource Include="Imagens\icon_menu_03.png" />
+    <Resource Include="Imagens\icon_menu_04.png" />
+    <Resource Include="Imagens\icon_menu_05.png" />
+    <Resource Include="Imagens\icon_menu_06.png" />
+    <Resource Include="Imagens\icon_menu_07.png" />
+    <Resource Include="Imagens\icon_menu_08.png" />
+    <Resource Include="Imagens\icon_menu_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\interno\base_interno_down.png" />
+    <Resource Include="Imagens\interno\base_interno_top.png" />
+    <Resource Include="Imagens\interno\bt_interno_ajuda.png" />
+    <Resource Include="Imagens\interno\bt_interno_voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\interno\tela_interna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\help_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\bradesco_32x32.ico" />
+    <Resource Include="Imagens\bradesco_42x42.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bradesco_32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bradesco_42x42.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\05_fundos_investimentos.png" />
+    <Resource Include="Imagens\telas\08_PROCON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\icon_menu_10.png" />
+    <Resource Include="Imagens\icon_menu_11.png" />
+    <Resource Include="Imagens\icon_menu_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\interno\icon_interno_01.png" />
+    <Resource Include="Imagens\interno\icon_interno_02.png" />
+    <Resource Include="Imagens\interno\icon_interno_03.png" />
+    <Resource Include="Imagens\interno\icon_interno_04.png" />
+    <Resource Include="Imagens\interno\icon_interno_05.png" />
+    <Resource Include="Imagens\interno\icon_interno_06.png" />
+    <Resource Include="Imagens\interno\icon_interno_07.png" />
+    <Resource Include="Imagens\interno\icon_interno_08.png" />
+    <Resource Include="Imagens\interno\icon_interno_09.png" />
+    <Resource Include="Imagens\interno\icon_interno_10.png" />
+    <Resource Include="Imagens\interno\icon_interno_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\prime\icon_prime_01_tarifas_pf.png" />
+    <Resource Include="Imagens\prime\icon_prime_02_tarifas_pj.png" />
+    <Resource Include="Imagens\prime\icon_prime_03_info_publico.png" />
+    <Resource Include="Imagens\prime\icon_prime_04_folhetos.png" />
+    <Resource Include="Imagens\prime\icon_prime_05_fundos_inves.png" />
+    <Resource Include="Imagens\prime\icon_prime_06_SCR.png" />
+    <Resource Include="Imagens\prime\prime_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\prime\11_PRIME_folhetos.png" />
+    <Resource Include="Imagens\prime\11_PRIME_fundos_investimentos.png" />
+    <Resource Include="Imagens\prime\11_PRIME_informativo_ao_publico.png" />
+    <Resource Include="Imagens\prime\11_PRIME_SCR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\prime\preview_folhetos_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\prime\indice_PRIME_PF.png" />
+    <Resource Include="Imagens\prime\indice_PRIME_PJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\04_canais_de_acesso.png" />
+    <Resource Include="Imagens\telas\06_informativo_ao_publico.png" />
+    <Resource Include="Imagens\telas\07_portabilidade.png" />
+    <Resource Include="Imagens\telas\09_SCR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\folhetos\10_folhetos.png" />
+    <Resource Include="Imagens\folhetos\10_folhetos_EXCLUSIVE.png" />
+    <Resource Include="Imagens\folhetos\preview_folhetos_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\help_cartazes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\indice_TARIFAS_PF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telas\indice_TARIFAS_PJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\prime\11_PRIME_tarifas_PF_old.jpg" />
+    <Resource Include="Imagens\telas\01_tarifas_PF_old.jpg" />
+    <Resource Include="Imagens\telas\02_tarifas_PJ_old.jpg" />
+    <Resource Include="Imagens\telas\03_INSS.png" />
+    <Resource Include="Imagens\prime\11_PRIME_tarifas_PJ.jpg" />
+    <Resource Include="Imagens\telas\tarifasPFVigencias.png" />
+    <Resource Include="Imagens\telas\tarifasPJVigencias.png" />
+    <Resource Include="Imagens\prime\PRIME_Vigencias.png" />
+    <Resource Include="Imagens\prime\11_PRIME_tarifas_PF.jpg" />
+    <Resource Include="Imagens\telas\01_tarifas_PF.jpg" />
+    <Resource Include="Imagens\telas\02_tarifas_PJ.jpg" />
+    <Content Include="bradesco_tiu_versao.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Imagens\procon\lista_procon_AL.png" />
+    <Resource Include="Imagens\procon\lista_procon_AM.png" />
+    <Resource Include="Imagens\procon\lista_procon_BA.png" />
+    <Resource Include="Imagens\procon\lista_procon_CE.png" />
+    <Resource Include="Imagens\procon\lista_procon_DF.png" />
+    <Resource Include="Imagens\procon\lista_procon_ES.png" />
+    <Resource Include="Imagens\procon\lista_procon_GO.png" />
+    <Resource Include="Imagens\procon\lista_procon_MA.png" />
+    <Resource Include="Imagens\procon\lista_procon_MG.png" />
+    <Resource Include="Imagens\procon\lista_procon_MS.png" />
+    <Resource Include="Imagens\procon\lista_procon_MT.png" />
+    <Resource Include="Imagens\procon\lista_procon_PA.png" />
+    <Resource Include="Imagens\procon\lista_procon_PE.png" />
+    <Resource Include="Imagens\procon\lista_procon_PI.png" />
+    <Resource Include="Imagens\procon\lista_procon_PR.png" />
+    <Resource Include="Imagens\procon\lista_procon_RJ.png" />
+    <Resource Include="Imagens\procon\lista_procon_RN.png" />
+    <Resource Include="Imagens\procon\lista_procon_RR.png" />
+    <Resource Include="Imagens\procon\lista_procon_RS.png" />
+    <Resource Include="Imagens\procon\lista_procon_SC.png" />
+    <Resource Include="Imagens\procon\lista_procon_SP.png" />
+    <Resource Include="Imagens\procon\lista_procon_TO.png" />
+    <Resource Include="Imagens\folhetos\10_folhetos_EMPRESAS.jpg" />
+    <Resource Include="Imagens\folhetos\10_folhetos_PF.jpg" />
+    <Resource Include="Imagens\telas\indice_TARIFAS_PJ_new.png" />
+    <Content Include="libmupdf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

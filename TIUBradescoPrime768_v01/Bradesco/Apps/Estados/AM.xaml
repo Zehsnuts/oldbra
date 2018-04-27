@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Bradesco.Apps.Estados.AM"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="768" Height="1022">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+    
+    <Canvas Name="scroll" ClipToBounds="True" >
+        <Image Source="/Bradesco;component/Imagens/procon/lista_procon_AM.PNG"
+               IsManipulationEnabled="True" 
+               ManipulationDelta="OnManipulationDelta" 
+               ManipulationInertiaStarting="OnInertiaStarting" 
+               ManipulationStarting="OnManipulationStarting" 
+               Width="768" Height="1022" />
+    </Canvas>
+</UserControl>

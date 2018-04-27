@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Bradesco.Apps.Prime.PrimePJ"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	mc:Ignorable="d" Width="768" Height="1022">
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas Name="canvasTarifa" ClipToBounds="True" >
+        <Image Width="768" Height="1022" Source="/Bradesco;component/Imagens/prime/indice_prime_pj.png" Stretch="UniformToFill" />
+
+        <ContentControl Tag="0"     Content="" Canvas.Left="20" Canvas.Top="10" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"  />
+        <ContentControl Tag="1626"  Content="" Canvas.Left="20" Canvas.Top="58" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown" />
+        <ContentControl Tag="2173"  Content="" Canvas.Left="20" Canvas.Top="106" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" />
+        <ContentControl Tag="2680"  Content="" Canvas.Left="20" Canvas.Top="154" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="3277"  Content="" Canvas.Left="20" Canvas.Top="202" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="3976"  Content="" Canvas.Left="20" Canvas.Top="250" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="4398"  Content="" Canvas.Left="20" Canvas.Top="297" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="5263"  Content="" Canvas.Left="20" Canvas.Top="346" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="5661"  Content="" Canvas.Left="20" Canvas.Top="393" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="5950"  Content="" Canvas.Left="20" Canvas.Top="441" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="7011"  Content="" Canvas.Left="20" Canvas.Top="489" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="8506"  Content="" Canvas.Left="20" Canvas.Top="537" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="8907"  Content="" Canvas.Left="20" Canvas.Top="585" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="10086" Content="" Canvas.Left="20" Canvas.Top="633" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="11104" Content="" Canvas.Left="20" Canvas.Top="680" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="11223" Content="" Canvas.Left="20" Canvas.Top="729" Height="38" Width="727" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="11852" Content="" Canvas.Left="20" Canvas.Top="776" Height="38" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+
+        <TextBlock x:Name="txtVigencia" Canvas.Left="203" Text="" TextWrapping="Wrap" Canvas.Top="902" Height="18" Width="107" Background="#00A0A2A5" Foreground="White" FontFamily="NewJuneBold" FontSize="14"/>
+        <TextBlock x:Name="txtTarifas"  Canvas.Left="44" TextWrapping="Wrap" Canvas.Top="1000" Height="13" Width="676" Background="#00A6A8AB" Foreground="White" FontFamily="NewJuneMedium" FontSize="10"/>        
+        
+    </Canvas>
+
+</UserControl>

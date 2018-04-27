@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="Bradesco.Apps.Prime.PrimeMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+ Width="1080" Height="1440">
+
+    <UserControl.Resources>
+
+        <Style x:Key="MyFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Margin="3 2">
+                            <Rectangle Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
+                            <Border Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ShadowStyle">
+            <Setter Property="Control.Foreground" Value="LightGray" />
+        </Style>
+        <Style x:Key="InformButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="11px"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                        <GradientStop Color="#FFFFD190" Offset="0.2"/>
+                        <GradientStop Color="Orange" Offset="0.85"/>
+                        <GradientStop Color="#FFFFD190" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+				BorderThickness="0"
+				Padding="4,2" 
+				BorderBrush="DarkGray" 
+				CornerRadius="3" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Center" 
+	                           VerticalAlignment="Center" Name="contentShadow" 
+					Style="{StaticResource ShadowStyle}">
+                                    <ContentPresenter.RenderTransform>
+                                        <TranslateTransform X="1.0" Y="1.0" />
+                                    </ContentPresenter.RenderTransform>
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" >
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                            <GradientStop Color="#FFFFD190" Offset="0.35"/>
+                                            <GradientStop Color="Orange" Offset="0.95"/>
+                                            <GradientStop Color="#FFFFD190" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="content" Property="RenderTransform" >
+                                    <Setter.Value>
+                                        <TranslateTransform Y="1.0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="Gray" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas  ClipToBounds="True" >
+
+        <Image Source="/Bradesco;component/Imagens/prime/prime_bg.png" Stretch="UniformToFill" Height="1440" Width="1080" />
+
+        <Button Name="btn1" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="204" Canvas.Top="495" Width="175" Height="223" Margin="0" Click="btn1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_01_tarifas_pf.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+        <!--<Button x:Name="btn2" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="471" Canvas.Top="495" Width="175" Height="223" Margin="0" Click="btn2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_02_tarifas_pj.png" Stretch="UniformToFill" />
+            </Button.Background>
+
+        </Button>-->
+        <Button x:Name="btn3" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="471" Canvas.Top="495" Width="175" Height="223" Click="btn3_Click" Margin="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_03_info_publico.png" Stretch="UniformToFill"
+                            />
+            </Button.Background>
+
+
+        </Button>
+        <Button x:Name="btn4" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="204" Canvas.Top="769" Width="175" Height="223" Margin="0" Click="btn4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_04_folhetos.png" Stretch="UniformToFill"
+                            />
+            </Button.Background>
+
+
+        </Button>
+        <Button x:Name="btn5" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="471" Canvas.Top="769" Width="175" Height="223" Margin="0" Click="btn5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_05_fundos_inves.png" Stretch="UniformToFill"
+                            />
+            </Button.Background>
+
+
+        </Button>
+        <Button x:Name="btn6" Style="{StaticResource InformButton}" Content="" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0" Canvas.Left="724" Canvas.Top="495" Width="175" Height="223" Margin="0" Click="btn6_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bradesco;component/Imagens/prime/icon_prime_06_scr.png" Stretch="UniformToFill"
+                            />
+            </Button.Background>
+
+
+        </Button>
+
+
+    </Canvas>
+
+
+
+
+
+</UserControl>

@@ -1,0 +1,325 @@
+﻿<UserControl
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:src="clr-namespace:Bradesco.Helpers"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Bradesco.Main"
+        d:DesignWidth="1055" d:DesignHeight="1675" Width="1080" Height="1920" VerticalAlignment="Center" >
+
+
+    <UserControl.Resources>
+        <src:Ticker x:Key="ticker"/>
+
+        <Style x:Key="MyFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Margin="3 2">
+                            <Rectangle Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
+                            <Border Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ShadowStyle">
+            <Setter Property="Control.Foreground" Value="LightGray" />
+        </Style>
+        <Style x:Key="InformButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="11px"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                        <GradientStop Color="#FFFFD190" Offset="0.2"/>
+                        <GradientStop Color="Orange" Offset="0.85"/>
+                        <GradientStop Color="#FFFFD190" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+				BorderThickness="0"
+				Padding="4,2" 
+				BorderBrush="DarkGray" 
+				CornerRadius="3" 
+				Background="{TemplateBinding Background}">
+                            <Grid >
+                                <ContentPresenter HorizontalAlignment="Center" 
+	                           VerticalAlignment="Center" Name="contentShadow" 
+					Style="{StaticResource ShadowStyle}">
+                                    <ContentPresenter.RenderTransform>
+                                        <TranslateTransform X="1.0" Y="1.0" />
+                                    </ContentPresenter.RenderTransform>
+                                </ContentPresenter>
+                                <ContentPresenter HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" Name="content"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" >
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                            <GradientStop Color="#FFFFD190" Offset="0.35"/>
+                                            <GradientStop Color="Orange" Offset="0.95"/>
+                                            <GradientStop Color="#FFFFD190" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="content" Property="RenderTransform" >
+                                    <Setter.Value>
+                                        <TranslateTransform Y="1.0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="Gray" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Imagens/main.png"/>
+        </Grid.Background>
+
+        <MediaElement Name="mediaElementBackGround" Margin="18,230,18,130"  MediaEnded="mediaElementBackGround_MediaEnded"
+                      
+                      Stretch="UniformToFill" d:IsHidden="True"/>
+
+
+        <Button Name="btnTarifasPF" Style="{StaticResource InformButton}" Content="" Margin="156,354,755,1307" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="259" Width="169" BorderThickness="0" Click="Button_Click_3">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_01.png" Stretch="None"/>
+            </Button.Background>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+
+            <Button.RenderTransform>
+                <TranslateTransform X="-100"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnTarifasPJ" Style="{StaticResource InformButton}" Content="" Margin="460,354,450,1307" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="259" Width="170" BorderThickness="0" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_02.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-300"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnInss" Style="{StaticResource InformButton}" Content="" Margin="755,354,156,1307" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="259" Width="169" BorderThickness="0" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_03.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-500"/>
+            </Button.RenderTransform>
+        </Button>
+
+        <Button Name="btnCanaisAcesso" Style="{StaticResource InformButton}" Content="" Margin="156,702,755,956" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="262" Width="169" BorderThickness="0" Click="Button_Click_5">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_04.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-100"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnFundosInvestimento" Style="{StaticResource InformButton}"  Content="" Margin="462,702,0,956" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Left" Height="262" Width="169" BorderThickness="0" Click="Button_Click" >
+
+
+
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_05.png" Stretch="None"/>
+            </Button.Background>
+
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+
+
+            <Button.RenderTransform>
+                <TranslateTransform X="-300"/>
+            </Button.RenderTransform>
+
+        </Button>
+        <Button Name="btnInformativoPublico" Style="{StaticResource InformButton}" Content="" Margin="755,702,156,956" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="262" Width="169" BorderThickness="0" Click="Button_Click_4">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_06.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-500"/>
+            </Button.RenderTransform>
+        </Button>
+
+
+
+        <Button Name="btnPortabilidade" Style="{StaticResource InformButton}" Content="" Margin="156,1061,755,598" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="261" Width="169" BorderThickness="0" Click="Button_Click_9">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_07.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-100"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnProcon" Style="{StaticResource InformButton}" Content="" Margin="462,1061,449,598" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="261" Width="169" BorderThickness="0" Click="Button_Click_7">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_08.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-300"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnInfoCredito" Style="{StaticResource InformButton}" Content="" Margin="755,1061,156,598" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="261" Width="169" BorderThickness="0" Click="Button_Click_6">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_09.png" Stretch="None"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-500"/>
+            </Button.RenderTransform>
+        </Button>
+
+
+        <Button Name="btnFolheto" Style="{StaticResource InformButton}" Content="" Margin="156,1401,755,291" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="228" Width="169" BorderThickness="0" Click="btn10_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_10.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+
+            <Button.RenderTransform>
+                <TranslateTransform X="-100"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnPrime" Style="{StaticResource InformButton}" Content="" Margin="461,1391,450,280" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="249" Width="169" BorderThickness="0" Click="btn11_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_11.png" Stretch="UniformToFill"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-300"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="btnAjuda" Style="{StaticResource InformButton}" Content="" Margin="755,1392,165,279" RenderTransformOrigin="-2.8,-0.25" VerticalAlignment="Center" HorizontalAlignment="Center" Height="249" Width="160" BorderThickness="0" Click="Button_Click_8">
+            <Button.Background>
+                <ImageBrush ImageSource="Imagens/icon_menu_12.png" Stretch="UniformToFill"/>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TranslateTransform X="-500"/>
+            </Button.RenderTransform>
+        </Button>
+
+
+        <Label Content="{Binding Source={StaticResource ticker}, Path=Now, Mode=OneWay}" Margin="551,42,185,1832" FontFamily="NewJuneHeavy" Foreground="Gray" FontSize="28" />
+        <Label Content="{Binding Source={StaticResource ticker}, Path=Today, Mode=OneWay}" Margin="551,84,10,1788" FontFamily="NewJuneHeavy" Foreground="Gray" FontSize="26" />
+
+        <Label x:Name="LabelVersionApp" Content="" Margin="564,1843,24,49" Foreground="LightGray" FontSize="15" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelVersionContent" Content="" Margin="564,1863,24,29" Foreground="LightGray" FontSize="15" HorizontalContentAlignment="Right"/>
+
+        <Grid Name="gridAjuda" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1080" Height="1920" d:IsHidden="True" />
+
+    </Grid>
+
+</UserControl>

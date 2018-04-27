@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Bradesco.Apps.FundosDeInvestimento"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+ Width="1080" Height="1440">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <!--<Canvas Name="scroll" ClipToBounds="True" >
+        <Image Source="/Bradesco;component/Imagens/telas/05_fundos_investimentos.png"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               Stretch="UniformToFill" 
+               IsManipulationEnabled="True" 
+               ManipulationDelta="OnManipulationDelta" 
+               ManipulationInertiaStarting="OnInertiaStarting" 
+               ManipulationStarting="OnManipulationStarting" Height="1440" Width="1080" />
+        <ContentControl TouchDown="ContentControl_TouchDown" Content="" Canvas.Right="0" Canvas.Bottom="0" Height="85" Width="100" />
+    </Canvas>-->
+
+    <Canvas Name="scroll" ClipToBounds="True" >
+        <Canvas Name="canvasContent" IsManipulationEnabled="True" 
+                ManipulationDelta="OnManipulationDelta" 
+                ManipulationInertiaStarting="OnInertiaStarting" 
+                ManipulationStarting="OnManipulationStarting"
+                Width="1080" Height="1440">
+            <Image Source="/Bradesco;component/Imagens/telas/05_fundos_investimentos.png" Stretch="UniformToFill" Width="1080" Height="1448"/>
+            <ContentControl TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" Content="" Canvas.Right="0" Canvas.Bottom="0" Height="70" Width="73" Canvas.Left="997" Canvas.Top="1370" />
+        </Canvas>
+    </Canvas>
+
+</UserControl>
+

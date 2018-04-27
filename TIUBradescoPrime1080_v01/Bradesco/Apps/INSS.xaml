@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Bradesco.Apps.INSS"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+ Width="1080" Height="1440">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+
+    <Canvas Name="scroll" ClipToBounds="True" >
+        <Image Source="/Bradesco;component/Imagens/telas/03_INSS.png" Stretch="UniformToFill"
+               IsManipulationEnabled="True" 
+               ManipulationDelta="OnManipulationDelta" 
+               ManipulationInertiaStarting="OnInertiaStarting" 
+               ManipulationStarting="OnManipulationStarting" Width="1080" Height="1440" />
+        <ContentControl TouchDown="ContentControl_TouchDown" Content="" Canvas.Left="104" Canvas.Top="1358" Height="60" Width="61"/>
+    </Canvas>
+
+</UserControl>

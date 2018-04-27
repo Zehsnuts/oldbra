@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Bradesco.Apps.Folhetos.FolhetosIndice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="768" Height="1022">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas Name="canvasTarifa"  ClipToBounds="True"  >
+        <Image Source="/Bradesco;component/Imagens/folhetos/10_folhetos.png" Stretch="UniformToFill" IsManipulationEnabled="True"  Width="768" Height="1022" />
+        <ContentControl Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="112" Height="36" Width="727" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="160" Height="36" Width="727" TouchDown="ContentControl_TouchDown_1"  MouseDown="ContentControl_TouchDown_1" />
+        <ContentControl Content="" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="208" Height="36" Width="727" TouchDown="ContentControl_TouchDown_2"  MouseDown="ContentControl_TouchDown_2"/>
+    </Canvas>
+
+</UserControl>

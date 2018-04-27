@@ -1,0 +1,30 @@
+﻿<UserControl
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Bradesco="clr-namespace:Bradesco"  x:Class="Bradesco.Apps.InformativoAoPublico" 
+      mc:Ignorable="d" d:DesignWidth="300" Width="768" Height="1022">
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas Name="scroll" ClipToBounds="True">
+        <Canvas Name="canvasContent" IsManipulationEnabled="True" 
+                ManipulationDelta="OnManipulationDelta" 
+                ManipulationInertiaStarting="OnInertiaStarting" 
+                ManipulationStarting="OnManipulationStarting"
+                Width="768" Height="1030">
+            <Image Source="/Bradesco;component/Imagens/telas/06_informativo_ao_publico.png" Stretch="UniformToFill" Width="768" Height="1030" />
+            <ContentControl TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" Content="" Canvas.Left="651" Canvas.Top="965" Height="57" Width="57"/>
+            <ContentControl TouchDown="ContentControl_TouchDown_1" MouseDown="ContentControl_TouchDown_1" Content="" Canvas.Left="708" Canvas.Top="965" Height="57" Width="60"/>
+        </Canvas>
+    </Canvas>
+
+</UserControl>

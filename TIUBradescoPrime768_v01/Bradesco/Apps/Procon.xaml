@@ -1,0 +1,257 @@
+﻿<UserControl x:Class="Bradesco.Apps.Procon"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Width="768" Height="1022">
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+
+    <Canvas ClipToBounds="True">
+        <Image Source="/Bradesco;component/Imagens/telas/08_PROCON.png" Width="768" Height="1022"/>
+        <ContentControl Tag="SP" Content="" IsManipulationEnabled="True" Canvas.Left="396" Canvas.Top="624" Height="59" Width="96" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.079,0.969">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="36.735"/>
+                    <TranslateTransform X="21.787" Y="-16.997"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="RS" Content="" IsManipulationEnabled="True" Canvas.Left="352" Canvas.Top="762" Height="71" Width="94" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="31.245"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="SC" Content="" IsManipulationEnabled="True" Canvas.Left="420" Canvas.Top="741" Height="29" Width="61" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="12.243"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="PR" Content="" IsManipulationEnabled="True" Canvas.Left="396" Canvas.Top="688" Height="41" Width="59" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.523,0.447">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="11.744"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="MS" Content="" IsManipulationEnabled="True" Canvas.Left="340" Canvas.Top="608" Height="73" Width="65" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown">
+        </ContentControl>
+        <ContentControl Tag="MG" Content="" IsManipulationEnabled="True" Canvas.Left="503" Canvas.Top="551" Height="108" Width="83" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="38.472"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="ES" Content="" IsManipulationEnabled="True" Canvas.Left="607" Canvas.Top="611" Height="46" Width="20" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="19.62"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="RJ" Content="" IsManipulationEnabled="True" Canvas.Left="550" Canvas.Top="654" Height="33" Width="70" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-29.451"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="BA" Content="" IsManipulationEnabled="True" Canvas.Left="543" Canvas.Top="448" Height="93" Width="122" TouchDown="ContentControl_TouchDown"  MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-16.496"/>
+                    <RotateTransform Angle="-162.637"/>
+                    <TranslateTransform X="-6.031" Y="2.039"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="MT" Content="" IsManipulationEnabled="True" Canvas.Left="277" Canvas.Top="471" Height="80" Width="104" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="25.741"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="26.518"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="DF" Content="" IsManipulationEnabled="True" Canvas.Left="460" Canvas.Top="526" Height="45" Width="45" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="GO" Content="" IsManipulationEnabled="True" Canvas.Left="417" Canvas.Top="568" Height="38" Width="75" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="TO" Content="" IsManipulationEnabled="True" Canvas.Left="468" Canvas.Top="418" Height="95" Width="38" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown"/>
+        <ContentControl Tag="RO" Content="" IsManipulationEnabled="True" Canvas.Left="155" Canvas.Top="465" Height="38" Width="69" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="50.669"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="40.587"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="AM" Content="" IsManipulationEnabled="True" Canvas.Left="128" Canvas.Top="313" Height="110" Width="165" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="10.919"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="AC" Content="" IsManipulationEnabled="True" Canvas.Left="49" Canvas.Top="440" Height="38" Width="117" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="18.156"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="RR" Content="" IsManipulationEnabled="True" Canvas.Left="227" Canvas.Top="234" Height="55" Width="77" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-94.934"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="PA" Content="" IsManipulationEnabled="True" Canvas.Left="357" Canvas.Top="322" Height="131" Width="104" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="10.919"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="AP" Content="" IsManipulationEnabled="True" Canvas.Left="401" Canvas.Top="239" Height="47" Width="46" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="10.919"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="RN" Content="" IsManipulationEnabled="True" Canvas.Left="676" Canvas.Top="382" Height="23" Width="20" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="19.62"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="PB" Content="" IsManipulationEnabled="True" Canvas.Left="678" Canvas.Top="398" Height="37" Width="11" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="95.429"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="PE" Content="" IsManipulationEnabled="True" Canvas.Left="660" Canvas.Top="385" Height="101" Width="14" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="86.421"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="AL" Content="" IsManipulationEnabled="True" Canvas.Left="675" Canvas.Top="439" Height="37" Width="11" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-42.517"/>
+                    <RotateTransform Angle="92.553"/>
+                    <TranslateTransform X="9.16" Y="0.408"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="SE" Content="" IsManipulationEnabled="True" Canvas.Left="663" Canvas.Top="470" Height="14" Width="20" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.021"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="CE" Content="" IsManipulationEnabled="True" Canvas.Left="620" Canvas.Top="338" Height="46" Width="36" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="1.455,0.629">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-15.718"/>
+                    <TranslateTransform X="-3.102" Y="6.069"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="PI" Content="" IsManipulationEnabled="True" Canvas.Left="560" Canvas.Top="402" Height="74" Width="32" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-53.239"/>
+                    <RotateTransform Angle="19.62"/>
+                    <TranslateTransform X="6.967" Y="-19.544"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <ContentControl Tag="MA" Content="" IsManipulationEnabled="True" Canvas.Left="514" Canvas.Top="304" Height="98" Width="46" TouchDown="ContentControl_TouchDown" MouseDown="ContentControl_TouchDown" RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="0.838"/>
+                    <SkewTransform AngleY="41.774" AngleX="-12.174"/>
+                    <RotateTransform Angle="19.62"/>
+                    <TranslateTransform X="-3.145" Y="29.021"/>
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+    </Canvas>
+
+</UserControl>

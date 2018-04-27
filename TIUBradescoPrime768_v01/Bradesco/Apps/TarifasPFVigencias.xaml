@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Bradesco.Apps.TarifasPFVigencias"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Width="768" Height="1022">
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource showItemsStoryboard}" />
+                <BeginStoryboard Storyboard="{StaticResource showItemsMenuStoryboard}" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas Name="canvasTarifa"  ClipToBounds="True">
+        <Image Width="768" Height="1022" Source="/Bradesco;component/Imagens/telas/tarifasPFVigencias.png" Stretch="UniformToFill" />
+        <ContentControl Tag="0" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="10" Height="38" Width="727" TouchDown="OpenTarifasPF_old" MouseDown="OpenTarifasPF_old">
+            <TextBlock x:Name="vigPFOldText" Margin="60,9,0,9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF303030" FontFamily="NewJuneBold" FontSize="17" Width="662">Old</TextBlock>
+        </ContentControl>
+
+        <ContentControl Tag="416" IsManipulationEnabled="True" Canvas.Left="20" Canvas.Top="58" Height="38" Width="727" TouchDown="OpenTarifasPF" MouseDown="OpenTarifasPF">
+            <TextBlock x:Name="vigPFNewText" Margin="60,9,0,9" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF303030" FontFamily="NewJuneBold" FontSize="17" Width="661">New</TextBlock>
+        </ContentControl>
+    </Canvas>
+
+</UserControl>

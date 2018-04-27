@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Bradesco.Apps.Folhetos.FolhetosNavegador"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="768" Height="1022" >
+
+    <Canvas  ClipToBounds="True">
+        <Image Source="/Bradesco;component/Imagens/folhetos/preview_folhetos_bg.png" Stretch="UniformToFill" Width="768" Height="1022"/>
+
+        <DockPanel Canvas.Left="55" Canvas.Top="0" Width="658" Height="871" LastChildFill="True" >
+            <ScrollViewer  VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" PanningMode="Both">
+                <Grid ClipToBounds="True">
+                    <Image Stretch="Uniform" IsManipulationEnabled="True" MaxWidth="658" MaxHeight="871" Name="wbFolhetos" />
+                </Grid>
+            </ScrollViewer>
+        </DockPanel>
+
+        <ContentControl Content="" IsManipulationEnabled="True" Canvas.Left="697" Canvas.Top="408" Height="74" Width="71" TouchDown="ContentControl_TouchDown" MouseDown="UIElement_OnMouseDown"/>
+        <ContentControl Content="" IsManipulationEnabled="True" Canvas.Top="408" Height="74" Width="82" TouchDown="ContentControl_TouchDown_1" MouseDown="UIElement_OnMouseDown1"/>
+        <Image Name="qrView" Stretch="UniformToFill" Height="113" Width="112" Canvas.Top="890" Canvas.Left="193" />
+    </Canvas>
+
+</UserControl>
